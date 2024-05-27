@@ -114,10 +114,26 @@
         "responses": {
           "200": {
             "description": "ok",
+
             "content": {
-              "application/json": {},
-              "application/xml": {},
-              "text/xml": {}
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "object"
+                  },
+                  "type": "object"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
             }
           }
         },
@@ -190,20 +206,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "additionalProperties": false,
+                "additionalProperties": {
+                  "type": "object"
+                },
                 "type": "object"
               }
             },
             "application/xml": {
               "schema": {
-                "additionalProperties": false,
-                "type": "object"
+                "type": "string"
               }
             },
             "text/xml": {
               "schema": {
-                "additionalProperties": false,
-                "type": "object"
+                "type": "string"
               }
             }
           }
@@ -212,9 +228,24 @@
           "200": {
             "description": "ok",
             "content": {
-              "application/json": {},
-              "application/xml": {},
-              "text/xml": {}
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "object"
+                  },
+                  "type": "object"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
             }
           }
         },
@@ -288,9 +319,24 @@
           "200": {
             "description": "ok",
             "content": {
-              "application/json": {},
-              "application/xml": {},
-              "text/xml": {}
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "object"
+                  },
+                  "type": "object"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
             }
           }
         },
@@ -376,20 +422,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "additionalProperties": false,
+                "additionalProperties": {
+                  "type": "object"
+                },
                 "type": "object"
               }
             },
             "application/xml": {
               "schema": {
-                "additionalProperties": false,
-                "type": "object"
+                "type": "string"
               }
             },
             "text/xml": {
               "schema": {
-                "additionalProperties": false,
-                "type": "object"
+                "type": "string"
               }
             }
           }
@@ -398,9 +444,24 @@
           "200": {
             "description": "ok",
             "content": {
-              "application/json": {},
-              "application/xml": {},
-              "text/xml": {}
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "object"
+                  },
+                  "type": "object"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
             }
           }
         },
@@ -444,9 +505,24 @@
           "200": {
             "description": "ok",
             "content": {
-              "application/json": {},
-              "application/xml": {},
-              "text/xml": {}
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "object"
+                  },
+                  "type": "object"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
             }
           }
         },
@@ -532,20 +608,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "additionalProperties": false,
+                "additionalProperties": {
+                  "type": "object"
+                },
                 "type": "object"
               }
             },
             "application/xml": {
               "schema": {
-                "additionalProperties": false,
-                "type": "object"
+                "type": "string"
               }
             },
             "text/xml": {
               "schema": {
-                "additionalProperties": false,
-                "type": "object"
+                "type": "string"
               }
             }
           }
@@ -554,9 +630,24 @@
           "200": {
             "description": "ok",
             "content": {
-              "application/json": {},
-              "application/xml": {},
-              "text/xml": {}
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "type": "object"
+                  },
+                  "type": "object"
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/xml": {
+                "schema": {
+                  "type": "string"
+                }
+              }
             }
           }
         },
