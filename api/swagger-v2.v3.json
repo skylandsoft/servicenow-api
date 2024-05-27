@@ -17,6 +17,7 @@
     "/api/now/table/{tableName}": {
       "get": {
         "description": "Retrieve records from a table",
+        "operationId": "findAllRecords",
         "parameters": [
           {
             "name": "tableName",
@@ -104,10 +105,14 @@
               "text/xml": {}
             }
           }
-        }
+        },
+        "tags": [
+          "Table"
+        ]
       },
       "post": {
         "description": "Create a record",
+        "operationId": "createRecord",
         "parameters": [
           {
             "name": "tableName",
@@ -174,12 +179,16 @@
               "text/xml": {}
             }
           }
-        }
+        },
+        "tags": [
+          "Table"
+        ]
       }
     },
     "/api/now/table/{tableName}/{sys_id}": {
       "get": {
         "description": "Retrieve a record",
+        "operationId": "findRecordById",
         "parameters": [
           {
             "name": "tableName",
@@ -238,10 +247,14 @@
               "text/xml": {}
             }
           }
-        }
+        },
+        "tags": [
+          "Table"
+        ]
       },
       "put": {
         "description": "Modify a record",
+        "operationId": "modifyRecord",
         "parameters": [
           {
             "name": "tableName",
@@ -321,10 +334,14 @@
               "text/xml": {}
             }
           }
-        }
+        },
+        "tags": [
+          "Table"
+        ]
       },
       "delete": {
         "description": "Delete a record",
+        "operationId": "deleteRecord",
         "parameters": [
           {
             "name": "tableName",
@@ -355,10 +372,14 @@
               "text/xml": {}
             }
           }
-        }
+        },
+        "tags": [
+          "Table"
+        ]
       },
       "patch": {
         "description": "Update a record",
+        "operationId": "updateRecord",
         "parameters": [
           {
             "name": "tableName",
@@ -438,7 +459,10 @@
               "text/xml": {}
             }
           }
-        }
+        },
+        "tags": [
+          "Table"
+        ]
       }
     }
   }
