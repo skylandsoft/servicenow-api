@@ -4,7 +4,7 @@
 
   <groupId>com.skylandsoft</groupId>
   <artifactId>servicenow-api</artifactId>
-  <version>2.0.0</version>
+  <version>2.0.1</version>
   <packaging>jar</packaging>
   <name>servicenow-api</name>
 
@@ -104,9 +104,9 @@
               <library>jersey3</library>
 
               <output>${generated-source-output-folder}</output>
-              <apiPackage>${project.groupId}.jirasoftwarecloud.api</apiPackage>
-              <modelPackage>${project.groupId}.jirasoftwarecloud.model</modelPackage>
-              <invokerPackage>${project.groupId}.jirasoftwarecloud</invokerPackage>
+              <apiPackage>${project.groupId}.servicenow.api</apiPackage>
+              <modelPackage>${project.groupId}.servicenow.model</modelPackage>
+              <invokerPackage>${project.groupId}.servicenow</invokerPackage>
               <skipValidateSpec>true</skipValidateSpec>
               <generateAliasAsModel>true</generateAliasAsModel>
               <generateApiTests>false</generateApiTests>
@@ -136,7 +136,7 @@
         </executions>
         <configuration>
           <includes>
-            <include>${generated-source-output-folder}/src/main/java/com/skylandsoft/jirasoftwarecloud/model/FieldUpdateOperation.java</include>
+            <include>${generated-source-output-folder}/src/main/java/com/skylandsoft/servicenow/model/FieldUpdateOperation.java</include>
           </includes>
           <replacements>
             <replacement>
