@@ -123,16 +123,6 @@
                   },
                   "type": "object"
                 }
-              },
-              "application/xml": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "type": "string"
-                }
               }
             }
           }
@@ -235,16 +225,6 @@
                   },
                   "type": "object"
                 }
-              },
-              "application/xml": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "type": "string"
-                }
               }
             }
           }
@@ -325,16 +305,6 @@
                     "type": "object"
                   },
                   "type": "object"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "type": "string"
                 }
               }
             }
@@ -451,16 +421,6 @@
                   },
                   "type": "object"
                 }
-              },
-              "application/xml": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "type": "string"
-                }
               }
             }
           }
@@ -511,16 +471,6 @@
                     "type": "object"
                   },
                   "type": "object"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "type": "string"
                 }
               }
             }
@@ -636,16 +586,6 @@
                     "type": "object"
                   },
                   "type": "object"
-                }
-              },
-              "application/xml": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/xml": {
-                "schema": {
-                  "type": "string"
                 }
               }
             }
