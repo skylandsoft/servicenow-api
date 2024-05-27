@@ -188,9 +188,24 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {},
-            "application/xml": {},
-            "text/xml": {}
+            "application/json": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object"
+              }
+            }
           }
         },
         "responses": {
@@ -359,9 +374,24 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {},
-            "application/xml": {},
-            "text/xml": {}
+            "application/json": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object"
+              }
+            }
           }
         },
         "responses": {
@@ -500,9 +530,24 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {},
-            "application/xml": {},
-            "text/xml": {}
+            "application/json": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object"
+              }
+            },
+            "text/xml": {
+              "schema": {
+                "additionalProperties": false,
+                "type": "object"
+              }
+            }
           }
         },
         "responses": {
