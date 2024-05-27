@@ -5,6 +5,21 @@
     "description": "Allows you to perform create, read, update and delete (CRUD) operations on existing tables",
     "version": "latest"
   },
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "description": "You can access this resource via API Key auth.",
+        "in": "header",
+        "name": "x-sn-apikey",
+        "type": "apiKey"
+      },
+      "BasicAuth": {
+        "description": "You can access this resource via basic auth.",
+        "scheme": "basic",
+        "type": "http"
+      }
+    }
+  },
   "externalDocs": {
     "url": "https://docs.servicenow.com/?context=CSHelp:REST-Table-API"
   },
@@ -108,6 +123,14 @@
         },
         "tags": [
           "Table"
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BasicAuth": []
+          }
         ]
       },
       "post": {
@@ -182,6 +205,14 @@
         },
         "tags": [
           "Table"
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BasicAuth": []
+          }
         ]
       }
     },
@@ -250,6 +281,14 @@
         },
         "tags": [
           "Table"
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BasicAuth": []
+          }
         ]
       },
       "put": {
@@ -337,6 +376,14 @@
         },
         "tags": [
           "Table"
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BasicAuth": []
+          }
         ]
       },
       "delete": {
@@ -375,6 +422,14 @@
         },
         "tags": [
           "Table"
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BasicAuth": []
+          }
         ]
       },
       "patch": {
@@ -462,6 +517,14 @@
         },
         "tags": [
           "Table"
+        ],
+        "security": [
+          {
+            "ApiKeyAuth": []
+          },
+          {
+            "BasicAuth": []
+          }
         ]
       }
     }
