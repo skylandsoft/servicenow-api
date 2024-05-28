@@ -7,9 +7,15 @@
   },
   "components": {
     "securitySchemes": {
-      "ApiKeyAuth": {
+      "ApiKeyAuthHeader": {
         "description": "You can access this resource via API Key auth.",
         "in": "header",
+        "name": "x-sn-apikey",
+        "type": "apiKey"
+      },
+      "ApiKeyAuthQuery": {
+        "description": "You can access this resource via API Key auth.",
+        "in": "query",
         "name": "x-sn-apikey",
         "type": "apiKey"
       },
