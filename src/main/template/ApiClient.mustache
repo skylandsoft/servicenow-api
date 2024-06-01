@@ -2,12 +2,15 @@ package {{invokerPackage}};
 
 import {{javaxPackage}}.ws.rs.client.Client;
 import {{javaxPackage}}.ws.rs.client.ClientBuilder;
+import {{javaxPackage}}.ws.rs.client.ClientRequestFilter;
+import {{javaxPackage}}.ws.rs.client.ClientResponseFilter;;
 import {{javaxPackage}}.ws.rs.client.Entity;
 import {{javaxPackage}}.ws.rs.client.Invocation;
 import {{javaxPackage}}.ws.rs.client.WebTarget;
 import {{javaxPackage}}.ws.rs.core.Form;
 import {{javaxPackage}}.ws.rs.core.GenericType;
 import {{javaxPackage}}.ws.rs.core.MediaType;
+import {{javaxPackage}}.ws.rs.core.MultivaluedMap;
 import {{javaxPackage}}.ws.rs.core.Response;
 import {{javaxPackage}}.ws.rs.core.Response.Status;
 
@@ -26,6 +29,7 @@ import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import java.io.IOException;
 import java.io.InputStream;
 
+import java.net.HttpCookie;
 import java.net.URI;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
@@ -116,6 +120,7 @@ public class ApiClient{{#jsr310}} extends JavaTimeFormatter{{/jsr310}} {
           ){{^-last}},{{/-last}}
   {{#-last}}
   ){{/-last}}{{/servers}});
+  private List<HttpCookie> cookies = new ArrayList<>();
   protected Integer serverIndex = 0;
   protected Map<String, String> serverVariables = null;
   {{^hasOperationServers}}
@@ -1381,6 +1386,7 @@ public class ApiClient{{#jsr310}} extends JavaTimeFormatter{{/jsr310}} {
     clientConfig.register(MultiPartFeature.class);
     clientConfig.register(json);
     clientConfig.register(JacksonFeature.class);
+    registerCookieHandler(clientConfig);
     clientConfig.property(HttpUrlConnectorProvider.SET_METHOD_WORKAROUND, true);
     // turn off compliance validation to be able to send payloads with DELETE calls
     clientConfig.property(ClientProperties.SUPPRESS_HTTP_COMPLIANCE_VALIDATION, true);
@@ -1396,6 +1402,39 @@ public class ApiClient{{#jsr310}} extends JavaTimeFormatter{{/jsr310}} {
 
     return clientConfig;
   }
+
+  /**
+   * Register cookie handler to process Set-Cookie headers
+   * @param clientConfig
+   */
+  private void registerCookieHandler(final ClientConfig clientConfig) {
+    clientConfig.register((ClientRequestFilter) clientRequestContext -> {
+      // Add cookies to request
+      if (!cookies.isEmpty()) {
+        StringBuilder cookieHeader = new StringBuilder();
+        for (HttpCookie cookie : cookies) {
+          if (!cookieHeader.isEmpty()) {
+            cookieHeader.append("; ");
+          }
+          cookieHeader.append(cookie.toString());
+        }
+        clientRequestContext.getHeaders().add("Cookie", cookieHeader.toString());
+      }
+    });
+
+    clientConfig.register((ClientResponseFilter) (clientRequestContext, clientResponseContext) -> {
+      // Capture Set-Cookie headers
+      MultivaluedMap<String, Object> headers = clientRequestContext.getHeaders();
+      List<Object> setCookies = headers.get("Set-Cookie");
+      if (setCookies != null) {
+        for (Object header : setCookies) {
+          List<HttpCookie> cookies = HttpCookie.parse(String.valueOf(header));
+          cookies.addAll(cookies);
+        }
+      }
+    });
+  }
+
 
   /**
    * Customize the client builder.
